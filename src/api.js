@@ -11,5 +11,5 @@ export const searchMovie = async (q) => {
     const search = await axios.get(
         `${process.env.REACT_APP_BASEURL}/search/movie?query=${q}&api_key=${process.env.REACT_APP_APIKEY}`
     );
-    return search.data;
+    return search.data.results;
 };

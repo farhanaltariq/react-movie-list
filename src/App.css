@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap");
+body {
+    font-family: "DM Sans", sans-serif;
+}
 .App {
     text-align: center;
 }
@@ -28,8 +32,14 @@
 
 .Movie-wrapper {
     width: 500px;
-    background-color: antiquewhite;
+    background-color: #f0f0f0;
     color: black;
+    padding-bottom: 25px;
+    filter: brightness(90%);
+}
+
+.Movie-wrapper:hover {
+    filter: brightness(100%);
 }
 
 .Movie-search {
@@ -41,21 +51,47 @@
     width: 475px;
 }
 
+.Table {
+    font-weight: 600;
+}
+
 .Movie-title {
-    height: 60px;
-    margin-top: 26px;
+    height: 75px;
+    margin-top: 15px;
     font-weight: bold;
 }
 
-.Movie-date {
-    margin-top: 26px;
-    font-style: italic;
+.Movie-image {
+    height: 688px;
+    width: 100%;
+}
+
+.Desc {
+    float: left;
 }
 
 .Movie-rate {
+    float: left;
     color: red;
-    margin-bottom: 24px;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .Movie-search {
+        height: 24px;
+        font-size: 18px;
+        margin-bottom: 32px;
+        padding: 16px;
+        font-weight: bold;
+        width: 140px;
+    }
+    .Movie-title {
+        height: fit-content;
+        margin-bottom: 12px;
+    }
+    h1 {
+        font-size: 30px;
+    }
 }
